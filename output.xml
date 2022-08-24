@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220824 23:51:35.808" rpa="false" schemaversion="3">
+<suite id="s1" name="NopcommerceTest" source="E:\RobotFramework\auto\nopcommerce\TestCases\NopcommerceTest.robot">
+<test id="s1-t1" name="Register and Login and Sort" line="9">
+<kw name="Open website" library="NopcommercePageObject" type="SETUP">
+<kw name="open my browser" library="common">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220824 23:51:36.770" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20220824 23:51:36.770" endtime="20220824 23:51:49.513"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220824 23:51:49.513" endtime="20220824 23:51:49.780"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:36.770" endtime="20220824 23:51:49.780"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:36.770" endtime="20220824 23:51:49.780"/>
+</kw>
+<kw name="Click register link" library="NopcommercePageObject">
+<kw name="click into element" library="common">
+<arg>${registerLink}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:49.782" endtime="20220824 23:51:52.101"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:52.102" level="INFO">Clicking element 'class=ico-register'.</msg>
+<status status="PASS" starttime="20220824 23:51:52.101" endtime="20220824 23:51:53.277"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:49.781" endtime="20220824 23:51:53.277"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:49.781" endtime="20220824 23:51:53.277"/>
+</kw>
+<kw name="Verify Register Page" library="NopcommercePageObject">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${registerTitle}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220824 23:51:53.316" level="INFO">Element 'xpath = //div[@class='page-title']//h1' is displayed.</msg>
+<status status="PASS" starttime="20220824 23:51:53.279" endtime="20220824 23:51:53.316"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:53.278" endtime="20220824 23:51:53.316"/>
+</kw>
+<kw name="Register and login account" library="NopcommercePageObject">
+<kw name="Generate Random String" library="String">
+<var>${random_string}</var>
+<arg>5</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20220824 23:51:53.316" level="INFO">${random_string} = iwexx</msg>
+<status status="PASS" starttime="20220824 23:51:53.316" endtime="20220824 23:51:53.316"/>
+</kw>
+<kw name="click into element" library="common">
+<arg>${genderFemale}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:53.316" endtime="20220824 23:51:53.332"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:53.332" level="INFO">Clicking element 'id = gender-female'.</msg>
+<status status="PASS" starttime="20220824 23:51:53.332" endtime="20220824 23:51:53.404"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:53.316" endtime="20220824 23:51:53.404"/>
+</kw>
+<kw name="input into element" library="common">
+<arg>${firstName}</arg>
+<arg>bich</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:53.406" endtime="20220824 23:51:53.437"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220824 23:51:53.437" endtime="20220824 23:51:53.467"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:53.467" level="INFO">Typing text 'bich' into text field 'id = FirstName'.</msg>
+<status status="PASS" starttime="20220824 23:51:53.467" endtime="20220824 23:51:53.570"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:53.405" endtime="20220824 23:51:53.570"/>
+</kw>
+<kw name="input into element" library="common">
+<arg>${lastName}</arg>
+<arg>ngoc</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:53.571" endtime="20220824 23:51:53.596"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220824 23:51:53.597" endtime="20220824 23:51:53.642"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:53.643" level="INFO">Typing text 'ngoc' into text field 'id = LastName'.</msg>
+<status status="PASS" starttime="20220824 23:51:53.642" endtime="20220824 23:51:53.732"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:53.570" endtime="20220824 23:51:53.733"/>
+</kw>
+<kw name="select dropdown" library="common">
+<arg>DateOfBirthDay</arg>
+<arg>30</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:53.733" endtime="20220824 23:51:53.761"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${label}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220824 23:51:53.762" level="INFO">Selecting options from selection list 'DateOfBirthDay' by label 30.</msg>
+<status status="PASS" starttime="20220824 23:51:53.762" endtime="20220824 23:51:53.843"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:53.733" endtime="20220824 23:51:53.843"/>
+</kw>
+<kw name="select dropdown" library="common">
+<arg>DateOfBirthMonth</arg>
+<arg>December</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:53.844" endtime="20220824 23:51:53.873"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${label}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220824 23:51:53.874" level="INFO">Selecting options from selection list 'DateOfBirthMonth' by label December.</msg>
+<status status="PASS" starttime="20220824 23:51:53.874" endtime="20220824 23:51:53.950"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:53.843" endtime="20220824 23:51:53.950"/>
+</kw>
+<kw name="select dropdown" library="common">
+<arg>DateOfBirthYear</arg>
+<arg>1994</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:53.951" endtime="20220824 23:51:53.978"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${label}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220824 23:51:53.978" level="INFO">Selecting options from selection list 'DateOfBirthYear' by label 1994.</msg>
+<status status="PASS" starttime="20220824 23:51:53.978" endtime="20220824 23:51:54.057"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:53.950" endtime="20220824 23:51:54.057"/>
+</kw>
+<kw name="input into element" library="common">
+<arg>${email}</arg>
+<arg>${random_string}@gmail.com</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:54.058" endtime="20220824 23:51:54.085"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220824 23:51:54.085" endtime="20220824 23:51:54.118"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:54.118" level="INFO">Typing text 'iwexx@gmail.com' into text field 'id = Email'.</msg>
+<status status="PASS" starttime="20220824 23:51:54.118" endtime="20220824 23:51:54.273"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:54.057" endtime="20220824 23:51:54.273"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${actual_value}</var>
+<arg>${email}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:54.291" level="INFO">${actual_value} = iwexx@gmail.com</msg>
+<status status="PASS" starttime="20220824 23:51:54.273" endtime="20220824 23:51:54.291"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${email_value}</var>
+<arg>${actual_value}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220824 23:51:54.291" level="INFO">${email_value} = iwexx@gmail.com</msg>
+<status status="PASS" starttime="20220824 23:51:54.291" endtime="20220824 23:51:54.291"/>
+</kw>
+<kw name="input into element" library="common">
+<arg>${company}</arg>
+<arg>ABC software</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:54.291" endtime="20220824 23:51:54.322"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220824 23:51:54.322" endtime="20220824 23:51:54.369"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:54.369" level="INFO">Typing text 'ABC software' into text field 'id = Company'.</msg>
+<status status="PASS" starttime="20220824 23:51:54.369" endtime="20220824 23:51:54.477"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:54.291" endtime="20220824 23:51:54.477"/>
+</kw>
+<kw name="input into element" library="common">
+<arg>${password}</arg>
+<arg>123456</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:54.478" endtime="20220824 23:51:54.503"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220824 23:51:54.504" endtime="20220824 23:51:54.535"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:54.535" level="INFO">Typing text '123456' into text field 'id = Password'.</msg>
+<status status="PASS" starttime="20220824 23:51:54.535" endtime="20220824 23:51:54.639"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:54.478" endtime="20220824 23:51:54.639"/>
+</kw>
+<kw name="input into element" library="common">
+<arg>${confirmPassword}</arg>
+<arg>123456</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:54.640" endtime="20220824 23:51:54.666"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220824 23:51:54.667" endtime="20220824 23:51:54.705"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:54.705" level="INFO">Typing text '123456' into text field 'id = ConfirmPassword'.</msg>
+<status status="PASS" starttime="20220824 23:51:54.705" endtime="20220824 23:51:54.804"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:54.639" endtime="20220824 23:51:54.804"/>
+</kw>
+<kw name="click into element" library="common">
+<arg>${registerButton}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:54.805" endtime="20220824 23:51:54.833"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:54.834" level="INFO">Clicking element 'id = register-button'.</msg>
+<status status="PASS" starttime="20220824 23:51:54.833" endtime="20220824 23:51:55.808"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:54.805" endtime="20220824 23:51:55.809"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${registerResult}</arg>
+<arg>Your registration completed</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220824 23:51:55.809" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg timestamp="20220824 23:51:55.810" level="INFO">Verifying element 'class = result' contains exact text 'Your registration completed'.</msg>
+<status status="PASS" starttime="20220824 23:51:55.809" endtime="20220824 23:51:55.840"/>
+</kw>
+<kw name="click into element" library="common">
+<arg>${continueButton}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:55.840" endtime="20220824 23:51:55.855"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:55.855" level="INFO">Clicking element 'class = buttons'.</msg>
+<status status="PASS" starttime="20220824 23:51:55.855" endtime="20220824 23:51:56.396"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:55.840" endtime="20220824 23:51:56.396"/>
+</kw>
+<kw name="click into element" library="common">
+<arg>${logoutLink}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:56.398" endtime="20220824 23:51:56.438"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:56.438" level="INFO">Clicking element 'class=ico-logout'.</msg>
+<status status="PASS" starttime="20220824 23:51:56.438" endtime="20220824 23:51:57.186"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:56.397" endtime="20220824 23:51:57.186"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${loginLink}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220824 23:51:57.213" level="INFO">Current page contains element 'class=ico-login'.</msg>
+<status status="PASS" starttime="20220824 23:51:57.187" endtime="20220824 23:51:57.214"/>
+</kw>
+<kw name="click into element" library="common">
+<arg>${loginLink}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:57.215" endtime="20220824 23:51:57.238"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:57.239" level="INFO">Clicking element 'class=ico-login'.</msg>
+<status status="PASS" starttime="20220824 23:51:57.239" endtime="20220824 23:51:57.860"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:57.214" endtime="20220824 23:51:57.861"/>
+</kw>
+<kw name="input into element" library="common">
+<arg>${emailTextBox}</arg>
+<arg>${email_value}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:57.862" endtime="20220824 23:51:57.885"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220824 23:51:57.885" endtime="20220824 23:51:57.931"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:57.932" level="INFO">Typing text 'iwexx@gmail.com' into text field 'id=Email'.</msg>
+<status status="PASS" starttime="20220824 23:51:57.931" endtime="20220824 23:51:58.027"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:57.861" endtime="20220824 23:51:58.027"/>
+</kw>
+<kw name="input into element" library="common">
+<arg>${passwordTextBox}</arg>
+<arg>123456</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:58.028" endtime="20220824 23:51:58.052"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220824 23:51:58.052" endtime="20220824 23:51:58.098"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:58.099" level="INFO">Typing text '123456' into text field 'id=Password'.</msg>
+<status status="PASS" starttime="20220824 23:51:58.098" endtime="20220824 23:51:58.190"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:58.027" endtime="20220824 23:51:58.190"/>
+</kw>
+<kw name="click into element" library="common">
+<arg>${loginButton}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:58.191" endtime="20220824 23:51:58.216"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:58.217" level="INFO">Clicking element 'css=.login-button'.</msg>
+<status status="PASS" starttime="20220824 23:51:58.216" endtime="20220824 23:51:58.990"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:58.190" endtime="20220824 23:51:58.990"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${logoutLink}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220824 23:51:59.003" level="INFO">Current page contains element 'class=ico-logout'.</msg>
+<status status="PASS" starttime="20220824 23:51:58.990" endtime="20220824 23:51:59.003"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:53.316" endtime="20220824 23:51:59.003"/>
+</kw>
+<kw name="Select category" library="NopcommercePageObject">
+<kw name="click into element" library="common">
+<arg>${categoryBooks}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:59.005" endtime="20220824 23:51:59.037"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:51:59.037" level="INFO">Clicking element 'xpath=//ul[@class='top-menu notmobile']//a[text()='Books ']'.</msg>
+<status status="PASS" starttime="20220824 23:51:59.037" endtime="20220824 23:51:59.727"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:59.004" endtime="20220824 23:51:59.727"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${pageTitle}</arg>
+<arg>Books</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220824 23:51:59.727" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg timestamp="20220824 23:51:59.728" level="INFO">Verifying element 'xpath=//div[@class='page-title']//h1' contains exact text 'Books'.</msg>
+<status status="PASS" starttime="20220824 23:51:59.727" endtime="20220824 23:51:59.760"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:59.004" endtime="20220824 23:51:59.760"/>
+</kw>
+<kw name="Sort by Price Low to High" library="NopcommercePageObject">
+<kw name="select dropdown" library="common">
+<arg>products-orderby</arg>
+<arg>Price: Low to High</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:51:59.761" endtime="20220824 23:51:59.786"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${label}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220824 23:51:59.787" level="INFO">Selecting options from selection list 'products-orderby' by label Price: Low to High.</msg>
+<status status="PASS" starttime="20220824 23:51:59.787" endtime="20220824 23:51:59.871"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:59.761" endtime="20220824 23:51:59.872"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20220824 23:51:59.872" endtime="20220824 23:51:59.878"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{categries_list}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220824 23:51:59.879" level="INFO">@{categries_list} = [ ]</msg>
+<status status="PASS" starttime="20220824 23:51:59.879" endtime="20220824 23:51:59.879"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{get_price}</var>
+<arg>${prices}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220824 23:52:00.943" level="INFO">@{get_price} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="4ddd40bc4f4983f5f4d2d903dc2612ce", element="9784d322-a65f-414c-9d28-4e9df870d600")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20220824 23:51:59.879" endtime="20220824 23:52:00.943"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{get_price}</value>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4ddd40bc4f4983f5f4d2d903dc2612ce", element="9784d322-a65f-414c-9d28-4e9df870d600")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_value_price}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:52:00.962" level="INFO">${get_value_price} = $24.00</msg>
+<status status="PASS" starttime="20220824 23:52:00.943" endtime="20220824 23:52:00.962"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${categries_list}</arg>
+<arg>${get_value_price}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220824 23:52:00.963" endtime="20220824 23:52:00.963"/>
+</kw>
+<status status="PASS" starttime="20220824 23:52:00.943" endtime="20220824 23:52:00.963"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4ddd40bc4f4983f5f4d2d903dc2612ce", element="6dbab82a-bef8-4c6c-9158-bfd6051b5c02")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_value_price}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:52:00.980" level="INFO">${get_value_price} = $27.00</msg>
+<status status="PASS" starttime="20220824 23:52:00.963" endtime="20220824 23:52:00.980"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${categries_list}</arg>
+<arg>${get_value_price}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220824 23:52:00.981" endtime="20220824 23:52:00.981"/>
+</kw>
+<status status="PASS" starttime="20220824 23:52:00.963" endtime="20220824 23:52:00.981"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4ddd40bc4f4983f5f4d2d903dc2612ce", element="8307a733-989f-445f-b12d-538b074fdbcb")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_value_price}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:52:00.999" level="INFO">${get_value_price} = $51.00</msg>
+<status status="PASS" starttime="20220824 23:52:00.981" endtime="20220824 23:52:00.999"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${categries_list}</arg>
+<arg>${get_value_price}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220824 23:52:00.999" endtime="20220824 23:52:00.999"/>
+</kw>
+<status status="PASS" starttime="20220824 23:52:00.981" endtime="20220824 23:52:00.999"/>
+</iter>
+<status status="PASS" starttime="20220824 23:52:00.943" endtime="20220824 23:52:00.999"/>
+</for>
+<kw name="Copy List" library="Collections">
+<var>${categories_order}</var>
+<arg>${categries_list}</arg>
+<doc>Returns a copy of the given list.</doc>
+<msg timestamp="20220824 23:52:01.000" level="INFO">${categories_order} = ['$24.00', '$27.00', '$51.00']</msg>
+<status status="PASS" starttime="20220824 23:52:00.999" endtime="20220824 23:52:01.000"/>
+</kw>
+<kw name="Sort List" library="Collections">
+<arg>${categories_order}</arg>
+<doc>Sorts the given list in place.</doc>
+<status status="PASS" starttime="20220824 23:52:01.000" endtime="20220824 23:52:01.000"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${categories_order}</arg>
+<arg>${categries_list}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220824 23:52:01.000" endtime="20220824 23:52:01.001"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:59.760" endtime="20220824 23:52:01.001"/>
+</kw>
+<kw name="Sort by Price High to Low" library="NopcommercePageObject">
+<kw name="select dropdown" library="common">
+<arg>products-orderby</arg>
+<arg>Price: High to Low</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220824 23:52:01.003" endtime="20220824 23:52:01.031"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${label}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220824 23:52:01.032" level="INFO">Selecting options from selection list 'products-orderby' by label Price: High to Low.</msg>
+<status status="PASS" starttime="20220824 23:52:01.031" endtime="20220824 23:52:01.110"/>
+</kw>
+<status status="PASS" starttime="20220824 23:52:01.002" endtime="20220824 23:52:01.111"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20220824 23:52:01.111" endtime="20220824 23:52:01.119"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{categries_list}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220824 23:52:01.121" level="INFO">@{categries_list} = [ ]</msg>
+<status status="PASS" starttime="20220824 23:52:01.120" endtime="20220824 23:52:01.121"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{get_price}</var>
+<arg>${prices}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220824 23:52:01.562" level="INFO">@{get_price} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="4ddd40bc4f4983f5f4d2d903dc2612ce", element="323a8ed0-2bf6-4836-bc5b-c48db5fb4a9a")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20220824 23:52:01.121" endtime="20220824 23:52:01.562"/>
+</kw>
+<for flavor="IN">
+<var>${each}</var>
+<value>@{get_price}</value>
+<iter>
+<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4ddd40bc4f4983f5f4d2d903dc2612ce", element="323a8ed0-2bf6-4836-bc5b-c48db5fb4a9a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_value_price}</var>
+<arg>${each}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:52:01.585" level="INFO">${get_value_price} = $51.00</msg>
+<status status="PASS" starttime="20220824 23:52:01.563" endtime="20220824 23:52:01.585"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${categries_list}</arg>
+<arg>${get_value_price}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220824 23:52:01.585" endtime="20220824 23:52:01.586"/>
+</kw>
+<status status="PASS" starttime="20220824 23:52:01.563" endtime="20220824 23:52:01.586"/>
+</iter>
+<iter>
+<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4ddd40bc4f4983f5f4d2d903dc2612ce", element="d2ccfc69-34e0-48b4-a099-624ba4a77e2a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_value_price}</var>
+<arg>${each}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:52:01.603" level="INFO">${get_value_price} = $27.00</msg>
+<status status="PASS" starttime="20220824 23:52:01.586" endtime="20220824 23:52:01.603"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${categries_list}</arg>
+<arg>${get_value_price}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220824 23:52:01.603" endtime="20220824 23:52:01.603"/>
+</kw>
+<status status="PASS" starttime="20220824 23:52:01.586" endtime="20220824 23:52:01.603"/>
+</iter>
+<iter>
+<var name="${each}">&lt;selenium.webdriver.remote.webelement.WebElement (session="4ddd40bc4f4983f5f4d2d903dc2612ce", element="3b95881e-1779-45d3-afe6-ca9233d64a95")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_value_price}</var>
+<arg>${each}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220824 23:52:01.622" level="INFO">${get_value_price} = $24.00</msg>
+<status status="PASS" starttime="20220824 23:52:01.604" endtime="20220824 23:52:01.622"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${categries_list}</arg>
+<arg>${get_value_price}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220824 23:52:01.622" endtime="20220824 23:52:01.623"/>
+</kw>
+<status status="PASS" starttime="20220824 23:52:01.604" endtime="20220824 23:52:01.623"/>
+</iter>
+<status status="PASS" starttime="20220824 23:52:01.563" endtime="20220824 23:52:01.623"/>
+</for>
+<kw name="Copy List" library="Collections">
+<var>${categories_order}</var>
+<arg>${categries_list}</arg>
+<doc>Returns a copy of the given list.</doc>
+<msg timestamp="20220824 23:52:01.624" level="INFO">${categories_order} = ['$51.00', '$27.00', '$24.00']</msg>
+<status status="PASS" starttime="20220824 23:52:01.623" endtime="20220824 23:52:01.624"/>
+</kw>
+<kw name="Sort List" library="Collections">
+<arg>${categories_order}</arg>
+<doc>Sorts the given list in place.</doc>
+<status status="PASS" starttime="20220824 23:52:01.624" endtime="20220824 23:52:01.625"/>
+</kw>
+<kw name="Reverse List" library="Collections">
+<arg>${categories_order}</arg>
+<doc>Reverses the given list in place.</doc>
+<status status="PASS" starttime="20220824 23:52:01.625" endtime="20220824 23:52:01.626"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${categories_order}</arg>
+<arg>${categries_list}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220824 23:52:01.626" endtime="20220824 23:52:01.627"/>
+</kw>
+<status status="PASS" starttime="20220824 23:52:01.002" endtime="20220824 23:52:01.627"/>
+</kw>
+<kw name="close my browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220824 23:52:01.628" endtime="20220824 23:52:03.873"/>
+</kw>
+<status status="PASS" starttime="20220824 23:52:01.628" endtime="20220824 23:52:03.873"/>
+</kw>
+<status status="PASS" starttime="20220824 23:51:36.770" endtime="20220824 23:52:03.889"/>
+</test>
+<status status="PASS" starttime="20220824 23:51:35.823" endtime="20220824 23:52:03.889"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="NopcommerceTest">NopcommerceTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220824 23:51:55.809" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg timestamp="20220824 23:51:59.727" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+</errors>
+</robot>
